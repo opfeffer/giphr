@@ -73,3 +73,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// MARK: -
+
+extension AppDelegate {
+
+    public static var shared: AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+}
+

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="27B-VH-A6M">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Explore Giphy-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ExploreViewController" customModule="Giphr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="6gw-pI-3td">
+                                <rect key="frame" x="177.5" y="216" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Glv-bG-9DB" customClass="ErrorView">
+                                <rect key="frame" x="16" y="148" width="343" height="188"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="188" placeholder="YES" id="1qs-ax-id8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xbz-PR-Epm" customClass="PlayerView" customModule="Giphr" customModuleProvider="target">
+                                <rect key="frame" x="16" y="148" width="343" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" constant="300" id="gpd-5o-3PR"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hco-gm-KKi">
+                                <rect key="frame" x="16" y="601" width="343" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4E-Ol-Cvs" customClass="SecondaryButton" customModule="Giphr" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="SAVE"/>
+                                        <connections>
+                                            <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fdJ-Gw-g3A"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thG-DE-MV9" customClass="PrimaryButton" customModule="Giphr" customModuleProvider="target">
+                                        <rect key="frame" x="175.5" y="0.0" width="167.5" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="VXS-kd-UkQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="NEXT"/>
+                                        <connections>
+                                            <action selector="refresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PY3-PP-L2f"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hco-gm-KKi" secondAttribute="bottom" constant="16" id="0Je-U4-Dbf"/>
+                            <constraint firstItem="Glv-bG-9DB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1ay-y9-3YR"/>
+                            <constraint firstItem="6gw-pI-3td" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5Hr-0U-DSF"/>
+                            <constraint firstItem="Glv-bG-9DB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="9wv-Mg-uYW"/>
+                            <constraint firstItem="hco-gm-KKi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Xbz-PR-Epm" secondAttribute="bottom" constant="32" id="Cxq-Od-R0t"/>
+                            <constraint firstItem="Xbz-PR-Epm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="E5k-cv-NTd"/>
+                            <constraint firstItem="hco-gm-KKi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Glv-bG-9DB" secondAttribute="bottom" constant="32" id="EyN-Sd-1rr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xbz-PR-Epm" secondAttribute="trailing" constant="16" id="N2s-MK-8Ca"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hco-gm-KKi" secondAttribute="trailing" constant="16" id="gBD-PQ-cYx"/>
+                            <constraint firstItem="hco-gm-KKi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mJF-EU-DLp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Glv-bG-9DB" secondAttribute="trailing" constant="16" id="oqv-uq-KsP"/>
+                            <constraint firstItem="Xbz-PR-Epm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="ppR-Df-O4A"/>
+                            <constraint firstItem="6gw-pI-3td" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="q3W-Dc-Unm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Explore Giphy" largeTitleDisplayMode="always" id="xHh-j1-7T6">
+                        <barButtonItem key="backBarButtonItem" title=" " id="kci-Sp-Dfq"/>
+                        <barButtonItem key="rightBarButtonItem" title="Archive" id="rWJ-rF-Ft6">
+                            <connections>
+                                <segue destination="25N-K8-x8o" kind="show" id="olh-iR-soq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="errorView" destination="Glv-bG-9DB" id="IRa-4O-j07"/>
+                        <outlet property="nextButton" destination="thG-DE-MV9" id="gNW-yq-cBE"/>
+                        <outlet property="playerView" destination="Xbz-PR-Epm" id="aKK-Hn-9PB"/>
+                        <outlet property="playerViewHeightConstraint" destination="gpd-5o-3PR" id="oeE-dX-9Wa"/>
+                        <outlet property="saveButton" destination="A4E-Ol-Cvs" id="JC7-jb-2Et"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="336.80000000000001" y="126.38680659670166"/>
+        </scene>
+        <!--Archive-->
+        <scene sceneID="iu2-lP-Z03">
+            <objects>
+                <viewController id="25N-K8-x8o" customClass="ArchiveViewController" customModule="Giphr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="40A-tf-uOW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="Fxp-sB-Mhk" customClass="ErrorView">
+                                <rect key="frame" x="16" y="96" width="343" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BNK-aY-leN">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GiphyCardTableViewCell" rowHeight="180" id="sWq-lw-ihR" customClass="GiphyCardTableViewCell" customModule="Giphr" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="180"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sWq-lw-ihR" id="BDw-zW-q4v">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EeO-GV-jgd" userLabel="PlayerView" customClass="PlayerView" customModule="Giphr" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="11" width="345" height="158"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="EeO-GV-jgd" secondAttribute="bottom" id="OIn-bE-lLo"/>
+                                                <constraint firstItem="EeO-GV-jgd" firstAttribute="top" secondItem="BDw-zW-q4v" secondAttribute="topMargin" id="THy-Iq-Vf7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="EeO-GV-jgd" secondAttribute="trailing" id="aIe-bw-Awc"/>
+                                                <constraint firstItem="EeO-GV-jgd" firstAttribute="leading" secondItem="BDw-zW-q4v" secondAttribute="leadingMargin" id="fSR-oc-1l1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="playerView" destination="EeO-GV-jgd" id="ugd-7Y-itG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="25N-K8-x8o" id="sGB-9l-IIc"/>
+                                    <outlet property="delegate" destination="25N-K8-x8o" id="Zn3-YZ-9fv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="BNK-aY-leN" firstAttribute="leading" secondItem="LxX-VP-6L1" secondAttribute="leading" id="BRR-0p-lpZ"/>
+                            <constraint firstItem="LxX-VP-6L1" firstAttribute="trailing" secondItem="Fxp-sB-Mhk" secondAttribute="trailing" constant="16" id="TeG-LI-W9e"/>
+                            <constraint firstItem="BNK-aY-leN" firstAttribute="top" secondItem="LxX-VP-6L1" secondAttribute="top" id="bnh-vn-KdU"/>
+                            <constraint firstItem="Fxp-sB-Mhk" firstAttribute="leading" secondItem="LxX-VP-6L1" secondAttribute="leading" constant="16" id="f3s-JL-ihv"/>
+                            <constraint firstItem="Fxp-sB-Mhk" firstAttribute="top" secondItem="LxX-VP-6L1" secondAttribute="top" constant="32" id="fnk-eK-cTl"/>
+                            <constraint firstItem="LxX-VP-6L1" firstAttribute="trailing" secondItem="BNK-aY-leN" secondAttribute="trailing" id="iuC-Zg-eZK"/>
+                            <constraint firstItem="LxX-VP-6L1" firstAttribute="bottom" secondItem="BNK-aY-leN" secondAttribute="bottom" id="l8m-eT-GL1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LxX-VP-6L1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Archive" largeTitleDisplayMode="never" id="iZe-ch-0yp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="6QC-eA-zaF">
+                            <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="deleteButtonTapped:" destination="25N-K8-x8o" id="TSE-Jj-bKX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="errorView" destination="Fxp-sB-Mhk" id="xtW-ho-8eY"/>
+                        <outlet property="tableView" destination="BNK-aY-leN" id="8HM-iJ-WY2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wLZ-4W-dPO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045.5999999999999" y="126.38680659670166"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AWG-Hq-Hnk">
+            <objects>
+                <navigationController id="27B-VH-A6M" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="VjA-98-NHL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3wz-1F-rFJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XVX-BP-thO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-385" y="128"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>

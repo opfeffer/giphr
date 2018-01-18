@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C205" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ManagedGiphy" representedClassName="ManagedGiphy" syncable="YES">
+        <attribute name="archiveDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="height" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="mp4" attributeType="Transformable" syncable="YES"/>
+        <attribute name="webURL" attributeType="Transformable" syncable="YES"/>
+        <attribute name="width" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ManagedGiphy" positionX="-63" positionY="-18" width="128" height="135"/>
+    </elements>
+</model>

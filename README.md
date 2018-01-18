@@ -15,4 +15,12 @@ Delightful iOS app featuring animated gifs from the popular gif platform [giphy.
      $ open Giphr.xcworkspace
 
 
+## Enhancement ideas
+
+* [ ] Add ability to share giphies from the apps
+* [ ] Allow deleting of individual giphies in the archive
+* [ ] Allow "deleting" from the Explore scene
+* [ ] Add ability to specify `tag`  for searches
+
+
 Powered By GIPHY.

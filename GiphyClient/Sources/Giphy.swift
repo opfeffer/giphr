@@ -10,7 +10,7 @@ import Foundation
 
 public protocol Giphy {
     var id: String { get }
+    var webURL: URL { get }
     var mp4: URL { get }
-
     var size: CGSize { get }
 }

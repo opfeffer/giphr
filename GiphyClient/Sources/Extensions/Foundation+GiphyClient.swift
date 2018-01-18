@@ -43,8 +43,6 @@ public extension URLSession {
                 }
 
             default:
-                assert(false, "Unhandled URLResponse \(String(describing: response))")
-
                 let error = URLError(.badServerResponse)
                 completionHandler(.failure(error))
             }

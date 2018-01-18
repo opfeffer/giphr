@@ -11,7 +11,7 @@ import AVKit
 import AVFoundation
 import GiphyClient
 
-class ViewController: UIViewController {
+class ExploreViewController: UIViewController {
 
     enum State {
         case loading
@@ -19,12 +19,15 @@ class ViewController: UIViewController {
         case error(Error)
     }
 
-    @IBOutlet private(set) weak var cardView: UIView!
-    @IBOutlet private(set) weak var cardViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private(set) weak var playerView: PlayerView!
+    @IBOutlet private(set) weak var playerViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet private(set) weak var errorView: ErrorView!
     @IBOutlet private(set) weak var nextButton: UIButton!
+    @IBOutlet private(set) weak var saveButton: UIButton!
 
     lazy var giphyClient = GiphyClient()
+
+    lazy var context = AppDelegate.shared.persistentContainer.newBackgroundContext()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,16 +36,16 @@ class ViewController: UIViewController {
         navbar?.setBackgroundImage(UIImage(), for: .default)
         navbar?.shadowImage = UIImage()
 
-        cardView.clipsToBounds = true
-        cardView.layer.masksToBounds = true
-        cardView.layer.cornerRadius = 16
+        playerView.clipsToBounds = true
+        playerView.layer.masksToBounds = true
+        playerView.layer.cornerRadius = 16
 
         errorView.clipsToBounds = true
         errorView.layer.cornerRadius = 16
 
         let center = NotificationCenter.default
         center.addObserver(forName: .UIApplicationDidBecomeActive, object: nil, queue: nil) { [weak self] (_) in
-            self?.playerLayer?.player?.play()
+            self?.player?.play()
         }
 
         loadGiphy()
@@ -50,20 +53,51 @@ class ViewController: UIViewController {
 
     // MARK: User interactions
 
+    enum SomeError: Error {
+        case bad
+    }
+
     @IBAction func refresh(_ sender: Any) {
         loadGiphy()
+    }
+
+    @IBAction func save(_ sender: UIButton) {
+        guard sender.isSelected == false else { return }
+        guard case .playback(let giphy) = state else { return }
+
+        sender.isSelected = true
+        sender.setTitle("SAVED", for: .normal)
+
+        _ = ManagedGiphy.newGiphy(in: context, giphy: giphy)
+        try? context.save()
     }
 
     // MARK: Properties
 
     private var state: State = .loading {
         didSet {
+            print(state)
+
             switch state {
             case .loading:
-                playerLayer?.opacity = 0
+                player?.pause()
+                playerView?.alpha = 0
 
             case .playback(let giphy):
-                play(giphy: giphy)
+                saveButton.isSelected = false
+                saveButton.setTitle("SAVE", for: .normal)
+
+                let multiplier = playerView.frame.width / giphy.size.width
+                playerViewHeightConstraint.constant = giphy.size.height * multiplier
+                playerView.setNeedsLayout()
+                playerView.layoutIfNeeded()
+
+                playerView.alpha = 1
+
+                player = Player(url: giphy.mp4)
+                playerView.player = player?.player
+
+                player?.play()
 
             case .error(let error):
                 errorView.textLabel.text = error.localizedDescription
@@ -76,48 +110,22 @@ class ViewController: UIViewController {
         }
     }
 
-    private var looper: AVPlayerLooper?
-
-    private var playerLayer: AVPlayerLayer?
+    private var player: Player?
 
     // MARK: Custom methods
 
     private func loadGiphy() {
         state = .loading
 
-        giphyClient.random() { [weak self] (result) in
-            print(result)
-
+        giphyClient.random(tag: "school") { [weak self] (result) in
             self?.state = State(result)
         }
-    }
-
-    private func play(giphy: Giphy) {
-        cardView.layer.sublayers?.forEach { $0.removeFromSuperlayer() }
-
-        let multiplier = cardView.frame.width / giphy.size.width
-        cardViewHeightConstraint.constant = giphy.size.height * multiplier
-        cardView.setNeedsLayout()
-        cardView.layoutIfNeeded()
-
-        let player = AVQueuePlayer()
-        player.automaticallyWaitsToMinimizeStalling = false
-
-        let layer = AVPlayerLayer(player: player)
-        layer.frame = cardView.bounds
-        cardView.layer.addSublayer(layer)
-        playerLayer = layer
-
-        let item = AVPlayerItem(url: giphy.mp4)
-        looper = AVPlayerLooper(player: player, templateItem: item)
-
-        player.play()
     }
 }
 
 // MARK: -
 
-extension ViewController.State {
+extension ExploreViewController.State {
 
     init(_ result: Result<Giphy>) {
         switch result {
@@ -138,9 +146,3 @@ extension ViewController.State {
     }
 }
 
-// MARK: -
-
-final class ErrorView: UIView {
-    @IBOutlet private(set) weak var emojiLabel: UILabel!
-    @IBOutlet private(set) weak var textLabel: UILabel!
-}

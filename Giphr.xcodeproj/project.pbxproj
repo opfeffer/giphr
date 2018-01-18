@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D2482216200D3DEE00FA566E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2482215200D3DEE00FA566E /* AppDelegate.swift */; };
-		D2482218200D3DEE00FA566E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2482217200D3DEE00FA566E /* ViewController.swift */; };
+		D2482218200D3DEE00FA566E /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2482217200D3DEE00FA566E /* ExploreViewController.swift */; };
 		D248221B200D3DEE00FA566E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2482219200D3DEE00FA566E /* Main.storyboard */; };
 		D248221E200D3DEE00FA566E /* Giphr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D248221C200D3DEE00FA566E /* Giphr.xcdatamodeld */; };
 		D2482220200D3DEE00FA566E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D248221F200D3DEE00FA566E /* Assets.xcassets */; };
@@ -23,6 +23,12 @@
 		D2A7E486200EFDA4006C369E /* Giphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E485200EFDA4006C369E /* Giphy.swift */; };
 		D2A7E488200FB882006C369E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E487200FB882006C369E /* Button.swift */; };
 		D2A7E48A200FB8A4006C369E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E489200FB8A4006C369E /* Color.swift */; };
+		D2C1A82B2010DD2B00FA55C1 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C1A82A2010DD2B00FA55C1 /* ErrorView.swift */; };
+		D2C1A82D2010DE2900FA55C1 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2C1A82C2010DE2900FA55C1 /* ErrorView.xib */; };
+		D2D8A877201026DE008C836E /* ManagedGiphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D8A875201026DE008C836E /* ManagedGiphy.swift */; };
+		D2D8A87A2010359C008C836E /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D8A8792010359C008C836E /* ArchiveViewController.swift */; };
+		D2D8A87C20103EA4008C836E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D8A87B20103EA4008C836E /* Player.swift */; };
+		D2D8A87E2010546A008C836E /* CoreDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D8A87D2010546A008C836E /* CoreDataEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +58,7 @@
 /* Begin PBXFileReference section */
 		D2482212200D3DEE00FA566E /* Giphr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giphr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2482215200D3DEE00FA566E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D2482217200D3DEE00FA566E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D2482217200D3DEE00FA566E /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		D248221A200D3DEE00FA566E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D248221D200D3DEE00FA566E /* Giphr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Giphr.xcdatamodel; sourceTree = "<group>"; };
 		D248221F200D3DEE00FA566E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,7 +74,13 @@
 		D2A7E485200EFDA4006C369E /* Giphy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Giphy.swift; sourceTree = "<group>"; };
 		D2A7E487200FB882006C369E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		D2A7E489200FB8A4006C369E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		D2C1A82A2010DD2B00FA55C1 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		D2C1A82C2010DE2900FA55C1 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
 		D2D8A870200FEACD008C836E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D2D8A875201026DE008C836E /* ManagedGiphy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedGiphy.swift; sourceTree = "<group>"; };
+		D2D8A8792010359C008C836E /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
+		D2D8A87B20103EA4008C836E /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		D2D8A87D2010546A008C836E /* CoreDataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,12 +125,10 @@
 			isa = PBXGroup;
 			children = (
 				D2482215200D3DEE00FA566E /* AppDelegate.swift */,
-				D2A7E487200FB882006C369E /* Button.swift */,
-				D2A7E489200FB8A4006C369E /* Color.swift */,
-				D248221C200D3DEE00FA566E /* Giphr.xcdatamodeld */,
-				D2482219200D3DEE00FA566E /* Main.storyboard */,
+				D2D8A880201056BE008C836E /* CoreData */,
+				D2DE4B4C2010D9960019C550 /* Scenes */,
 				D2A7E48C200FC10C006C369E /* Supporting Files */,
-				D2482217200D3DEE00FA566E /* ViewController.swift */,
+				D2D8A87F201056A4008C836E /* UI */,
 			);
 			path = Giphr;
 			sourceTree = "<group>";
@@ -169,6 +179,38 @@
 				D2D8A870200FEACD008C836E /* README.md */,
 			);
 			name = ...;
+			sourceTree = "<group>";
+		};
+		D2D8A87F201056A4008C836E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D2A7E487200FB882006C369E /* Button.swift */,
+				D2A7E489200FB8A4006C369E /* Color.swift */,
+				D2D8A87B20103EA4008C836E /* Player.swift */,
+				D2C1A82A2010DD2B00FA55C1 /* ErrorView.swift */,
+				D2C1A82C2010DE2900FA55C1 /* ErrorView.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D2D8A880201056BE008C836E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D2D8A87D2010546A008C836E /* CoreDataEntity.swift */,
+				D248221C200D3DEE00FA566E /* Giphr.xcdatamodeld */,
+				D2D8A875201026DE008C836E /* ManagedGiphy.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		D2DE4B4C2010D9960019C550 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D2D8A8792010359C008C836E /* ArchiveViewController.swift */,
+				D2482219200D3DEE00FA566E /* Main.storyboard */,
+				D2482217200D3DEE00FA566E /* ExploreViewController.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +312,7 @@
 				D2482223200D3DEE00FA566E /* LaunchScreen.storyboard in Resources */,
 				D2482220200D3DEE00FA566E /* Assets.xcassets in Resources */,
 				D248221B200D3DEE00FA566E /* Main.storyboard in Resources */,
+				D2C1A82D2010DE2900FA55C1 /* ErrorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,11 +330,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D8A87E2010546A008C836E /* CoreDataEntity.swift in Sources */,
 				D248221E200D3DEE00FA566E /* Giphr.xcdatamodeld in Sources */,
-				D2482218200D3DEE00FA566E /* ViewController.swift in Sources */,
+				D2482218200D3DEE00FA566E /* ExploreViewController.swift in Sources */,
 				D2482216200D3DEE00FA566E /* AppDelegate.swift in Sources */,
 				D2A7E48A200FB8A4006C369E /* Color.swift in Sources */,
+				D2C1A82B2010DD2B00FA55C1 /* ErrorView.swift in Sources */,
+				D2D8A87C20103EA4008C836E /* Player.swift in Sources */,
+				D2D8A877201026DE008C836E /* ManagedGiphy.swift in Sources */,
 				D2A7E488200FB882006C369E /* Button.swift in Sources */,
+				D2D8A87A2010359C008C836E /* ArchiveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
