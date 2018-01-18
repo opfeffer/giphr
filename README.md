@@ -2,6 +2,8 @@
 
 Delightful iOS app featuring animated gifs from the popular gif platform [giphy.com](https://giphy.com).
 
+**Also, check out the branch `feature/archive`. It implements persistence with CoreData.**
+
 ## Requirements
 
 * Xcode 9, Swift 4.0 (or 3.1)
