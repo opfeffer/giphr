@@ -13,7 +13,41 @@
 		D248221E200D3DEE00FA566E /* Giphr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D248221C200D3DEE00FA566E /* Giphr.xcdatamodeld */; };
 		D2482220200D3DEE00FA566E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D248221F200D3DEE00FA566E /* Assets.xcassets */; };
 		D2482223200D3DEE00FA566E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2482221200D3DEE00FA566E /* LaunchScreen.storyboard */; };
+		D2482233200D3E2E00FA566E /* GiphyClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D2482231200D3E2D00FA566E /* GiphyClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2482236200D3E2E00FA566E /* GiphyClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D248222F200D3E2D00FA566E /* GiphyClient.framework */; };
+		D2482237200D3E2E00FA566E /* GiphyClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D248222F200D3E2D00FA566E /* GiphyClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D248223E200D3E7800FA566E /* GiphyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D248223D200D3E7800FA566E /* GiphyClient.swift */; };
+		D2482240200D3F2100FA566E /* GiphyTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D248223F200D3F2100FA566E /* GiphyTypes.swift */; };
+		D2482242200D40FD00FA566E /* Foundation+GiphyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2482241200D40FD00FA566E /* Foundation+GiphyClient.swift */; };
+		D2A7E484200EFD86006C369E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E483200EFD86006C369E /* Result.swift */; };
+		D2A7E486200EFDA4006C369E /* Giphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E485200EFDA4006C369E /* Giphy.swift */; };
+		D2A7E488200FB882006C369E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E487200FB882006C369E /* Button.swift */; };
+		D2A7E48A200FB8A4006C369E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7E489200FB8A4006C369E /* Color.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D2482234200D3E2E00FA566E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D248220A200D3DEE00FA566E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D248222E200D3E2D00FA566E;
+			remoteInfo = GiphyClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D248223B200D3E2E00FA566E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D2482237200D3E2E00FA566E /* GiphyClient.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D2482212200D3DEE00FA566E /* Giphr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giphr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +58,29 @@
 		D248221F200D3DEE00FA566E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2482222200D3DEE00FA566E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2482224200D3DEE00FA566E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D248222F200D3E2D00FA566E /* GiphyClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GiphyClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2482231200D3E2D00FA566E /* GiphyClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GiphyClient.h; sourceTree = "<group>"; };
+		D2482232200D3E2E00FA566E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D248223D200D3E7800FA566E /* GiphyClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyClient.swift; sourceTree = "<group>"; };
+		D248223F200D3F2100FA566E /* GiphyTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyTypes.swift; sourceTree = "<group>"; };
+		D2482241200D40FD00FA566E /* Foundation+GiphyClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+GiphyClient.swift"; sourceTree = "<group>"; };
+		D2A7E483200EFD86006C369E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		D2A7E485200EFDA4006C369E /* Giphy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Giphy.swift; sourceTree = "<group>"; };
+		D2A7E487200FB882006C369E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		D2A7E489200FB8A4006C369E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		D2D8A870200FEACD008C836E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D248220F200D3DEE00FA566E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2482236200D3E2E00FA566E /* GiphyClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D248222B200D3E2D00FA566E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				D2482214200D3DEE00FA566E /* Giphr */,
+				D2482230200D3E2D00FA566E /* GiphyClient */,
+				D2D8A86F200FEA91008C836E /* ... */,
 				D2482213200D3DEE00FA566E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				D2482212200D3DEE00FA566E /* Giphr.app */,
+				D248222F200D3E2D00FA566E /* GiphyClient.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,17 +113,76 @@
 			isa = PBXGroup;
 			children = (
 				D2482215200D3DEE00FA566E /* AppDelegate.swift */,
-				D2482217200D3DEE00FA566E /* ViewController.swift */,
-				D2482219200D3DEE00FA566E /* Main.storyboard */,
-				D248221F200D3DEE00FA566E /* Assets.xcassets */,
-				D2482221200D3DEE00FA566E /* LaunchScreen.storyboard */,
-				D2482224200D3DEE00FA566E /* Info.plist */,
+				D2A7E487200FB882006C369E /* Button.swift */,
+				D2A7E489200FB8A4006C369E /* Color.swift */,
 				D248221C200D3DEE00FA566E /* Giphr.xcdatamodeld */,
+				D2482219200D3DEE00FA566E /* Main.storyboard */,
+				D2A7E48C200FC10C006C369E /* Supporting Files */,
+				D2482217200D3DEE00FA566E /* ViewController.swift */,
 			);
 			path = Giphr;
 			sourceTree = "<group>";
 		};
+		D2482230200D3E2D00FA566E /* GiphyClient */ = {
+			isa = PBXGroup;
+			children = (
+				D248223C200D3E3900FA566E /* Sources */,
+			);
+			path = GiphyClient;
+			sourceTree = "<group>";
+		};
+		D248223C200D3E3900FA566E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D2A7E48D200FD3BA006C369E /* Extensions */,
+				D2A7E485200EFDA4006C369E /* Giphy.swift */,
+				D2482231200D3E2D00FA566E /* GiphyClient.h */,
+				D248223D200D3E7800FA566E /* GiphyClient.swift */,
+				D248223F200D3F2100FA566E /* GiphyTypes.swift */,
+				D2482232200D3E2E00FA566E /* Info.plist */,
+				D2A7E483200EFD86006C369E /* Result.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D2A7E48C200FC10C006C369E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D248221F200D3DEE00FA566E /* Assets.xcassets */,
+				D2482221200D3DEE00FA566E /* LaunchScreen.storyboard */,
+				D2482224200D3DEE00FA566E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2A7E48D200FD3BA006C369E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D2482241200D40FD00FA566E /* Foundation+GiphyClient.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D2D8A86F200FEA91008C836E /* ... */ = {
+			isa = PBXGroup;
+			children = (
+				D2D8A870200FEACD008C836E /* README.md */,
+			);
+			name = ...;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D248222C200D3E2D00FA566E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2482233200D3E2E00FA566E /* GiphyClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		D2482211200D3DEE00FA566E /* Giphr */ = {
@@ -77,15 +192,35 @@
 				D248220E200D3DEE00FA566E /* Sources */,
 				D248220F200D3DEE00FA566E /* Frameworks */,
 				D2482210200D3DEE00FA566E /* Resources */,
+				D248223B200D3E2E00FA566E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D2482235200D3E2E00FA566E /* PBXTargetDependency */,
 			);
 			name = Giphr;
 			productName = Giphr;
 			productReference = D2482212200D3DEE00FA566E /* Giphr.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D248222E200D3E2D00FA566E /* GiphyClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2482238200D3E2E00FA566E /* Build configuration list for PBXNativeTarget "GiphyClient" */;
+			buildPhases = (
+				D248222A200D3E2D00FA566E /* Sources */,
+				D248222B200D3E2D00FA566E /* Frameworks */,
+				D248222C200D3E2D00FA566E /* Headers */,
+				D248222D200D3E2D00FA566E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GiphyClient;
+			productName = GiphyClient;
+			productReference = D248222F200D3E2D00FA566E /* GiphyClient.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -99,6 +234,11 @@
 				TargetAttributes = {
 					D2482211200D3DEE00FA566E = {
 						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					D248222E200D3E2D00FA566E = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -117,6 +257,7 @@
 			projectRoot = "";
 			targets = (
 				D2482211200D3DEE00FA566E /* Giphr */,
+				D248222E200D3E2D00FA566E /* GiphyClient */,
 			);
 		};
 /* End PBXProject section */
@@ -132,6 +273,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D248222D200D3E2D00FA566E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -142,10 +290,32 @@
 				D248221E200D3DEE00FA566E /* Giphr.xcdatamodeld in Sources */,
 				D2482218200D3DEE00FA566E /* ViewController.swift in Sources */,
 				D2482216200D3DEE00FA566E /* AppDelegate.swift in Sources */,
+				D2A7E48A200FB8A4006C369E /* Color.swift in Sources */,
+				D2A7E488200FB882006C369E /* Button.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D248222A200D3E2D00FA566E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D248223E200D3E7800FA566E /* GiphyClient.swift in Sources */,
+				D2482242200D40FD00FA566E /* Foundation+GiphyClient.swift in Sources */,
+				D2A7E484200EFD86006C369E /* Result.swift in Sources */,
+				D2482240200D3F2100FA566E /* GiphyTypes.swift in Sources */,
+				D2A7E486200EFDA4006C369E /* Giphy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2482235200D3E2E00FA566E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D248222E200D3E2D00FA566E /* GiphyClient */;
+			targetProxy = D2482234200D3E2E00FA566E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D2482219200D3DEE00FA566E /* Main.storyboard */ = {
@@ -277,30 +447,87 @@
 		D2482228200D3DEE00FA566E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KCS54TVP86;
 				INFOPLIST_FILE = Giphr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.opfeffer.lhms.Giphr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D2482229200D3DEE00FA566E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KCS54TVP86;
 				INFOPLIST_FILE = Giphr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.opfeffer.lhms.Giphr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D2482239200D3E2E00FA566E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KCS54TVP86;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GiphyClient/Sources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.opfeffer.lhms.GiphyClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D248223A200D3E2E00FA566E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KCS54TVP86;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GiphyClient/Sources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.opfeffer.lhms.GiphyClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -321,6 +548,15 @@
 			buildConfigurations = (
 				D2482228200D3DEE00FA566E /* Debug */,
 				D2482229200D3DEE00FA566E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2482238200D3E2E00FA566E /* Build configuration list for PBXNativeTarget "GiphyClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2482239200D3E2E00FA566E /* Debug */,
+				D248223A200D3E2E00FA566E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
